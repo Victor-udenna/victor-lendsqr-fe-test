@@ -81,19 +81,20 @@ npm run build
 
 ```
 src/
-├── assets/          # Images, icons, fonts
-├── components/      # Reusable UI components
-├── hooks/           # Custom React hooks
-├── pages/           # Page-level components
-│   ├── Login/
+├── assets/              # Images, icons, fonts
+├── components/          # Reusable UI components
+│   ├── layout/          # Layout components (Sidebar, Header, etc.)
+│   └── ui/              # Base UI components (Button, Input, etc.)
+├── lib/                 # Third-party library configs and utilities
+├── pages/               # Page-level components
 │   ├── Dashboard/
-│   ├── Users/
-│   └── UserDetails/
-├── services/        # API calls and mock data
-├── store/           # State management
-├── styles/          # Global SCSS variables and mixins
-├── types/           # TypeScript interfaces and types
-└── utils/           # Helper functions
+│   ├── Login/
+│   ├── UserDetails/
+│   └── Users/
+├── providers/           # React context providers
+├── store/               # State management
+├── styles/              # Global SCSS variables and mixins
+└── utils/               # Helper functions
 ```
 
 ---
