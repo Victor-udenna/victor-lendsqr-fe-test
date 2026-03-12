@@ -1,0 +1,52 @@
+@use "../../../styles/variable" as *;
+
+.container {
+  position: relative;
+}
+
+.container-full {
+  width: 100%;
+  margin-top: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+}
+
+.fetch__progress {
+  background-color: $white;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 7000;
+}
+.fetch__progress__bar {
+  animation: slide-progress-bar 1.1s linear infinite;
+  background: $brand-color;
+  height: 4px;
+  width: 30%;
+  position: absolute;
+  z-index: 3000;
+}
+@keyframes slide-progress-bar {
+  0% {
+    margin-left: 0%;
+    width: 30%;
+  }
+  40% {
+    width: 60%;
+  }
+  100% {
+    margin-left: 100%;
+    width: 30%;
+  }
+}

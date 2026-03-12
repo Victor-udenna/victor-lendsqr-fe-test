@@ -1,0 +1,223 @@
+@use "../../../styles/variable" as *;
+
+.details-back__btn {
+  background-color: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  border: none;
+  padding: 0px;
+  font-size: $font-size-md;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: left;
+  color: $text-color;
+  cursor: pointer;
+}
+
+.details__header {
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+}
+
+.details__button__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  button {
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    line-height: 16.42px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+  }
+}
+
+.details__header__link-container {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.details__header__container {
+  padding: 24px 24px 0px 24px;
+  border-radius: 4px;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  background-color: $white;
+  margin-top: 50px;
+  border: 1px solid #213f7d0f;
+}
+
+.details__header__link {
+  font-size: $font-size-md;
+  font-weight: 400;
+  line-height: 19.09px;
+  text-align: center;
+  color: #000000cc;
+  padding: 8px 0px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.details__header__link.active {
+  color: $brand-color;
+  border-bottom: 2px solid $brand-color;
+}
+
+.details__header__text {
+  font-size: $font-size-2xl;
+  font-weight: 500;
+  line-height: 28.15px;
+  text-align: left;
+  color: #213f7d;
+}
+
+.details__blacklist__btn {
+  color: #e4033b;
+  border: 1px solid #e4033b;
+}
+
+.details__deactivate__btn {
+  color: $white;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.details__activate__btn {
+  color: $brand-color;
+  border: 1px solid $brand-color;
+}
+
+.details__activate__btn:hover {
+  background-color: $brand-color;
+  border: 1px solid $brand-color;
+  color: $white;
+}
+
+.details__blacklist__btn:hover {
+  background-color: #e4033b;
+  border: 1px solid #e4033b;
+  color: $white;
+}
+
+.details__header_content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.details__header__img {
+  border-radius: 50%;
+}
+
+.details__header__text__container {
+  display: flex;
+  align-items: start;
+  gap: $spacing-sm;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.user__name {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.81px;
+  text-align: left;
+  color: #213f7d;
+}
+
+.user__id {
+  font-size: $font-size-sm;
+  font-weight: 400;
+  line-height: 16.42px;
+  text-align: left;
+  color: $text-color;
+}
+
+.user__tier {
+  font-size: $font-size-sm;
+  font-weight: 500;
+  line-height: 16.42px;
+  text-align: left;
+  color: $text-color;
+}
+
+.user__tier__rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+}
+
+.user__loan {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.81px;
+  text-align: left;
+  color: #213f7d;
+}
+
+.user__bank {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.08px;
+  text-align: left;
+  color: #213f7d;
+}
+
+.user__tier__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid #213f7d4d;
+  border-right: 1px solid #213f7d4d;
+}
+
+@media screen and (max-width: 1024px) {
+  .details__header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .details__header__link {
+    display: none;
+  }
+
+  .details__header__text {
+    display: none;
+  }
+
+  .details__information__text {
+    font-size: 12px;
+  }
+
+  .details__button__container {
+    width: 100%;
+  }
+
+  .details__header_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .details__header__text__container {
+    align-items: center;
+  }
+}

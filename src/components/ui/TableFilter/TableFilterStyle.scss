@@ -1,0 +1,114 @@
+@use "../../../styles/variable" as *;
+
+.filter {
+  background-color: $white;
+  top: 70px;
+  position: absolute;
+  left: 16px;
+  border: 1px solid #545f7d24;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 24px 16px;
+  flex-direction: column;
+  gap: $spacing-md;
+  z-index: 10;
+}
+
+.filter__input-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.filter__label {
+  font-size: $font-size-sm;
+  font-weight: 500;
+  line-height: 16.42px;
+  text-align: left;
+  color: $text-color;
+}
+
+.filter__input {
+  width: 230px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #213f7d1a;
+  padding: 0px 16px;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  line-height: 16.42px;
+  text-align: left;
+  color: $text-color;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  padding-right: 2rem;
+}
+
+.input-wrapper {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+
+  .input-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.filter__input:focus {
+  border-color: $brand-color;
+  outline: none;
+}
+
+.filter__button__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+
+  button {
+    width: 98px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    line-height: 16.42px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.filter__reset__button {
+  color: $text-color;
+  border: 1px solid $text-color;
+  background-color: $white;
+}
+
+.filter__action__button {
+  color: $white;
+  border: 1px solid $brand-color;
+  background-color: $brand-color;
+}
+
+@media screen and (max-width: 576px) {
+  .filter {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../styles/variable" as *;
+
+.user-page {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: #fcfcfc;
+  @media screen and (min-width: 1024px) {
+    padding: 60px 45px;
+  }
+}
+
+.userpage__header-text {
+  font-size: $font-size-2xl;
+  font-weight: 500;
+  line-height: 28.15px;
+  text-align: left;
+  color: #213f7d;
+}

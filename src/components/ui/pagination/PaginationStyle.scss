@@ -1,0 +1,103 @@
+@use "../../../styles/variable" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.pagination__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  p {
+    font-size: $font-size-sm;
+    font-weight: 400;
+    line-height: 16.42px;
+    text-align: left;
+    color: $text-color;
+  }
+}
+
+.pagination__select__container {
+  position: relative;
+  width: 80px;
+  img {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+  }
+}
+
+.pagination__result-select {
+  background-color: #213f7d1a;
+  width: 80px;
+  height: 30px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  line-height: 16.42px;
+  text-align: left;
+  color: #213f7d;
+  border: none;
+  appearance: none;
+  outline: none;
+}
+
+.pagination__result-select:focus {
+  border: 1px solid $brand-color;
+  outline: none;
+}
+
+.pagination__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+}
+
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #213f7d1a;
+  border: none;
+}
+
+.pagination__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  cursor: pointer;
+  p {
+    font-size: $font-size-md;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+    color: $text-color;
+    opacity: 0.5;
+  }
+
+  .active {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pagination__page {
+    display: none;
+  }
+
+  .pagination__btn {
+    width: 35px;
+    height: 35px;
+  }
+}

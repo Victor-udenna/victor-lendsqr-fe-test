@@ -1,0 +1,25 @@
+.dashboard-layout {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
+.page-content {
+  padding-top: 86px;
+  width: 100vw;
+  padding-left: 283px;
+  @media screen and (max-width: 576px) {
+    padding-left: 0;
+  }
+}

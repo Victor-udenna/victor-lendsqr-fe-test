@@ -1,0 +1,197 @@
+@use "../../styles/variable" as *;
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: "Avenir Next regular", sans-serif;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.login-page_img_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-basis: 50%;
+  background-color: #fcfcfc;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.login-page-img__wrapper {
+  width: 85%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+  }
+}
+
+.logo {
+  width: 173.76px;
+  position: absolute;
+  top: 106px;
+  left: 0px;
+  padding-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    position: relative;
+  }
+}
+
+.login-page__img {
+  width: 100%;
+  margin-bottom: -42px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.login-form-section {
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  gap: 42px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form-section__title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: $spacing-md;
+  width: 100%;
+  max-width: 447px;
+}
+.login-form-section__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -4%;
+  font-family: "Avenir Next bold", sans-serif;
+  color: $title-color;
+}
+
+.login-form-section__description {
+  font-weight: 400;
+  font-size: $font-size-xl;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $text-color;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 447px;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 447px;
+  height: 48px;
+  position: relative;
+}
+
+.login-input,
+.login-btn {
+  width: 100%;
+  max-width: 447px;
+  height: 48px;
+}
+
+.login-input {
+  padding: 0px 12px;
+  font-weight: 400;
+  font-size: $font-size-sm;
+  border-radius: 5px;
+  border: 2px solid $border-color;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $text-color;
+
+  &:focus {
+    border: 2px solid $brand-color;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $text-color;
+  }
+}
+
+.reveal-password {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  color: $brand-color;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  font-family: "Avenir Next bold", sans-serif;
+}
+
+.forgot-password {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: left;
+  text-transform: uppercase;
+  color: $brand-color;
+  padding-top: 8px;
+  font-family: "Avenir Next bold", sans-serif;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.login-btn {
+  font-weight: 600;
+  font-size: $font-size-sm;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: $brand-color;
+  color: $white;
+  border-radius: 8px;
+  font-family: "Avenir Next bold", sans-serif;
+}
+
+.login-btn.inactive {
+  opacity: 0.5;
+}
